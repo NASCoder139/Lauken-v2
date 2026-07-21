@@ -1,0 +1,12 @@
+# OS / editor
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+
+# Claude Design metadata
+.thumbnail
+
+# Node (por si más adelante se agrega tooling)
+node_modules/

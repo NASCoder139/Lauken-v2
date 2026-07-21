@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Montserrat', sans-serif; color: #363d43; background: #FBF9F4; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  a { color: #001d40; text-decoration: none; }
+  a:hover { color: #C3A24E; }
+  h1, h2, h3, h4 { margin: 0; font-family: 'Playfair Display', serif; font-weight: 600; color: #001d40; }
+  p { margin: 0; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  ::selection { background: #C3A24E; color: #fff; }
+  .cat-scroll::-webkit-scrollbar { height: 6px; }
+  .cat-scroll::-webkit-scrollbar-thumb { background: #d8cdb5; border-radius: 6px; }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:100vw;">
+
+<!-- ========== 1. HERO ========== -->
+<header style="position:relative; min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding: clamp(28px,6vw,64px) clamp(20px,5vw,72px) clamp(120px,14vw,180px); text-align:center; overflow:hidden;">
+  <div style="position:absolute; inset:0; z-index:0;">
+    <image-slot id="hero-bg" shape="rect" fit="cover" src="./assets/hero-lago.png" placeholder="Fotografía panorámica del Lago Rapel al atardecer"></image-slot>
+  </div>
+  <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background: linear-gradient(180deg, rgba(0,29,64,0) 62%, rgba(0,29,64,0.28) 82%, rgba(0,29,64,0.55) 100%);"></div>
+
+  <h1 class="sr-only">Lago Rapel Propiedades — Tu Lugar junto al Lago</h1>
+
+</header>
+
+<!-- ========== 2. BRAND CARDS ========== -->
+<section aria-label="Marcas" style="position:relative; z-index:3; margin-top: clamp(-100px,-11vw,-130px); padding: 0 clamp(20px,5vw,72px) clamp(60px,8vw,100px);">
+  <div style="max-width:1060px; margin:0 auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: clamp(20px,3vw,32px);">
+
+    <article data-reveal style="background:#FBF9F4; border:1px solid #ECE3D0; border-radius:14px; box-shadow: 0 24px 60px -28px rgba(0,29,64,.45); padding: clamp(32px,4vw,48px) clamp(26px,3.5vw,44px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+        <span style="font-family:'Playfair Display',serif; font-weight:600; font-size: clamp(22px,2.6vw,30px); color:#001d40; letter-spacing:.02em;">Laukén</span>
+        <span style="font-family:'Montserrat',sans-serif; font-weight:500; font-size:12px; letter-spacing:.36em; color:#C3A24E;">INMOBILIARIA</span>
+      </div>
+      <div style="width:40px; height:1px; background:#E0D6C0;"></div>
+      <p style="font-family:'Montserrat',sans-serif; font-size:16px; color:#5a5f63; font-weight:400;">Proyectos junto al lago</p>
+      <a href="#" style="margin-top:6px; display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:14px 34px; background:#001d40; color:#FBF9F4; font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:.16em; border-radius:5px; transition:background .3s ease, transform .3s ease;" style-hover="background:#223e3f; transform:translateY(-2px)">VER MÁS</a>
+    </article>
+
+    <article data-reveal style="background:#FBF9F4; border:1px solid #ECE3D0; border-radius:14px; box-shadow: 0 24px 60px -28px rgba(0,29,64,.45); padding: clamp(32px,4vw,48px) clamp(26px,3.5vw,44px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+        <span style="font-family:'Playfair Display',serif; font-weight:600; font-size: clamp(22px,2.6vw,30px); color:#001d40; letter-spacing:.02em;">Goycolea</span>
+        <span style="font-family:'Montserrat',sans-serif; font-weight:500; font-size:12px; letter-spacing:.36em; color:#C3A24E;">PROPIEDADES</span>
+      </div>
+      <div style="width:40px; height:1px; background:#E0D6C0;"></div>
+      <p style="font-family:'Montserrat',sans-serif; font-size:16px; color:#5a5f63; font-weight:400;">Propiedades junto al lago</p>
+      <a href="#" style="margin-top:6px; display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:14px 34px; background:#001d40; color:#FBF9F4; font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:.16em; border-radius:5px; transition:background .3s ease, transform .3s ease;" style-hover="background:#223e3f; transform:translateY(-2px)">VER MÁS</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ========== 3. ¿QUÉ ESTÁS BUSCANDO? ========== -->
+<section aria-label="Qué estás buscando" style="padding: clamp(40px,6vw,80px) clamp(20px,5vw,72px) clamp(60px,8vw,100px);">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div data-reveal style="text-align:center; margin-bottom: clamp(36px,5vw,60px);">
+      <span style="font-family:'Montserrat',sans-serif; font-size:12px; letter-spacing:.34em; color:#C3A24E;">EXPLORA</span>
+      <h2 style="margin-top:14px; font-size: clamp(30px,5vw,52px); font-weight:600;">¿Qué estás buscando?</h2>
+    </div>
+
+    <div class="cat-scroll" style="display:grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px,2.4vw,26px);">
+      <a data-reveal href="#" style="position:relative; display:block; border-radius:14px; overflow:hidden; aspect-ratio: 3/4; min-height:320px; box-shadow:0 18px 44px -26px rgba(0,29,64,.5);">
+        <image-slot id="cat-parcelas" shape="rect" fit="cover" placeholder="Foto de parcelas junto al lago"></image-slot>
+        <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,29,64,0) 42%, rgba(0,29,64,.78) 100%); transition:opacity .4s ease;"></div>
+        <div style="position:absolute; left:0; right:0; bottom:0; padding: clamp(20px,2.6vw,30px); pointer-events:none; display:flex; align-items:center; justify-content:space-between; gap:12px;">
+          <h3 style="color:#FBF9F4; font-size: clamp(22px,2.6vw,30px); font-weight:600;">Parcelas</h3>
+          <span style="color:#C3A24E;" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a data-reveal href="#" style="position:relative; display:block; border-radius:14px; overflow:hidden; aspect-ratio: 3/4; min-height:320px; box-shadow:0 18px 44px -26px rgba(0,29,64,.5);">
+        <image-slot id="cat-sitios" shape="rect" fit="cover" placeholder="Foto de sitios junto al lago"></image-slot>
+        <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,29,64,0) 42%, rgba(0,29,64,.78) 100%);"></div>
+        <div style="position:absolute; left:0; right:0; bottom:0; padding: clamp(20px,2.6vw,30px); pointer-events:none; display:flex; align-items:center; justify-content:space-between; gap:12px;">
+          <h3 style="color:#FBF9F4; font-size: clamp(22px,2.6vw,30px); font-weight:600;">Sitios</h3>
+          <span style="color:#C3A24E;" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a data-reveal href="#" style="position:relative; display:block; border-radius:14px; overflow:hidden; aspect-ratio: 3/4; min-height:320px; box-shadow:0 18px 44px -26px rgba(0,29,64,.5);">
+        <image-slot id="cat-casas" shape="rect" fit="cover" placeholder="Foto de casas junto al lago"></image-slot>
+        <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,29,64,0) 42%, rgba(0,29,64,.78) 100%);"></div>
+        <div style="position:absolute; left:0; right:0; bottom:0; padding: clamp(20px,2.6vw,30px); pointer-events:none; display:flex; align-items:center; justify-content:space-between; gap:12px;">
+          <h3 style="color:#FBF9F4; font-size: clamp(22px,2.6vw,30px); font-weight:600;">Casas</h3>
+          <span style="color:#C3A24E;" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a data-reveal href="#" style="position:relative; display:block; border-radius:14px; overflow:hidden; aspect-ratio: 3/4; min-height:320px; box-shadow:0 18px 44px -26px rgba(0,29,64,.5);">
+        <image-slot id="cat-proyectos" shape="rect" fit="cover" placeholder="Foto de proyectos junto al lago"></image-slot>
+        <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,29,64,0) 42%, rgba(0,29,64,.78) 100%);"></div>
+        <div style="position:absolute; left:0; right:0; bottom:0; padding: clamp(20px,2.6vw,30px); pointer-events:none; display:flex; align-items:center; justify-content:space-between; gap:12px;">
+          <h3 style="color:#FBF9F4; font-size: clamp(22px,2.6vw,30px); font-weight:600;">Proyectos</h3>
+          <span style="color:#C3A24E;" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. PROPIEDADES DESTACADAS ========== -->
+<section aria-label="Propiedades destacadas" style="padding: clamp(40px,6vw,80px) clamp(20px,5vw,72px) clamp(60px,8vw,100px); background:#F3EEE3;">
+  <div style="max-width:1120px; margin:0 auto;">
+    <div data-reveal style="text-align:center; margin-bottom: clamp(36px,5vw,60px);">
+      <span style="font-family:'Montserrat',sans-serif; font-size:12px; letter-spacing:.34em; color:#C3A24E;">SELECCIÓN</span>
+      <h2 style="margin-top:14px; font-size: clamp(30px,5vw,52px); font-weight:600;">Propiedades Destacadas</h2>
+    </div>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: clamp(24px,3vw,36px);">
+
+      <!-- Propiedad 1 -->
+      <article data-reveal style="background:#FBF9F4; border-radius:16px; overflow:hidden; box-shadow:0 22px 54px -30px rgba(0,29,64,.5); display:flex; flex-direction:column;">
+        <div style="position:relative; aspect-ratio:16/11;">
+          <image-slot id="prop-1" shape="rect" fit="cover" placeholder="Foto San Rafael - Lago Rapel"></image-slot>
+          <span style="position:absolute; top:16px; left:16px; background:rgba(0,29,64,.92); color:#FBF9F4; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:.14em; padding:8px 14px; border-radius:4px;">LAUKÉN INMOBILIARIA</span>
+        </div>
+        <div style="padding: clamp(24px,3vw,34px); display:flex; flex-direction:column; gap:16px;">
+          <div>
+            <h3 style="font-size: clamp(23px,2.6vw,30px); font-weight:600;">San Rafael · Lago Rapel</h3>
+            <p style="margin-top:6px; font-family:'Montserrat',sans-serif; font-size:15px; color:#6a6f73;">Parcelas desde 5.000 m²</p>
+          </div>
+          <p style="font-family:'Playfair Display',serif; font-size: clamp(24px,3vw,32px); font-weight:600; color:#223e3f;">Desde $34.900.000</p>
+          <div style="height:1px; background:#ECE3D0;"></div>
+          <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
+            <li style="display:flex; align-items:center; gap:12px; font-family:'Montserrat',sans-serif; font-size:15px; color:#4c5155;"><span style="color:#C3A24E; flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v10M12 13a4 4 0 0 0 4 4M12 13a4 4 0 0 1-4 4M5 13h14l-1.5 6h-11L5 13z"/><circle cx="12" cy="5" r="2"/></svg></span>Marina exclusiva</li>
+            <li style="display:flex; align-items:center; gap:12px; font-family:'Montserrat',sans-serif; font-size:15px; color:#4c5155;"><span style="color:#C3A24E; flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>Rol propio</li>
+            <li style="display:flex; align-items:center; gap:12px; font-family:'Montserrat',sans-serif; font-size:15px; color:#4c5155;"><span style="color:#C3A24E; flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>Acceso controlado</li>
+          </ul>
+          <a href="#" style="margin-top:8px; display:flex; align-items:center; justify-content:center; min-height:52px; width:100%; background:#001d40; color:#FBF9F4; font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:.16em; border-radius:6px; transition:background .3s ease;" style-hover="background:#223e3f">VER PROPIEDAD</a>
+        </div>
+      </article>
+
+      <!-- Propiedad 2 -->
+      <article data-reveal style="background:#FBF9F4; border-radius:16px; overflow:hidden; box-shadow:0 22px 54px -30px rgba(0,29,64,.5); display:flex; flex-direction:column;">
+        <div style="position:relative; aspect-ratio:16/11;">
+          <image-slot id="prop-2" shape="rect" fit="cover" placeholder="Foto Casa a orilla de Lago Rapel"></image-slot>
+          <span style="position:absolute; top:16px; left:16px; background:rgba(34,62,63,.94); color:#FBF9F4; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; letter-spacing:.14em; padding:8px 14px; border-radius:4px;">GOYCOLEA PROPIEDADES</span>
+        </div>
+        <div style="padding: clamp(24px,3vw,34px); display:flex; flex-direction:column; gap:16px;">
+          <div>
+            <h3 style="font-size: clamp(23px,2.6vw,30px); font-weight:600;">Casa a orilla de Lago Rapel</h3>
+            <p style="margin-top:6px; font-family:'Montserrat',sans-serif; font-size:15px; color:#6a6f73;">Propiedad seleccionada</p>
+          </div>
+          <p style="font-family:'Playfair Display',serif; font-size: clamp(24px,3vw,32px); font-weight:600; color:#223e3f;">UF 8.900</p>
+          <div style="height:1px; background:#ECE3D0;"></div>
+          <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
+            <li style="display:flex; align-items:center; gap:12px; font-family:'Montserrat',sans-serif; font-size:15px; color:#4c5155;"><span style="color:#C3A24E; flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14l4-5 4 4 4-6 6 8"/><path d="M3 14v4h18v-2"/></svg></span>Vista al lago</li>
+            <li style="display:flex; align-items:center; gap:12px; font-family:'Montserrat',sans-serif; font-size:15px; color:#4c5155;"><span style="color:#C3A24E; flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l7-16 4 9 2-4 3 11z"/></svg></span>Acceso cercano</li>
+            <li style="display:flex; align-items:center; gap:12px; font-family:'Montserrat',sans-serif; font-size:15px; color:#4c5155;"><span style="color:#C3A24E; flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>Excelente ubicación</li>
+          </ul>
+          <a href="#" style="margin-top:8px; display:flex; align-items:center; justify-content:center; min-height:52px; width:100%; background:#001d40; color:#FBF9F4; font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:.16em; border-radius:6px; transition:background .3s ease;" style-hover="background:#223e3f">VER PROPIEDAD</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5. BANNER CALIDAD DE VIDA ========== -->
+<section aria-label="Calidad de vida" data-reveal style="position:relative; min-height: clamp(420px,52vw,560px); display:flex; align-items:center; overflow:hidden;">
+  <div style="position:absolute; inset:0;">
+    <image-slot id="banner-calidad" shape="rect" fit="cover" placeholder="Familia observando el lago desde un muelle"></image-slot>
+  </div>
+  <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg, rgba(0,29,64,.82) 0%, rgba(0,29,64,.55) 46%, rgba(0,29,64,.18) 100%);"></div>
+  <div style="position:relative; z-index:2; max-width:1200px; margin:0 auto; width:100%; padding: clamp(40px,6vw,80px) clamp(24px,6vw,90px);">
+    <div style="max-width:620px; display:flex; flex-direction:column; gap:22px;">
+      <div style="width:56px; height:2px; background:#C3A24E;"></div>
+      <h2 style="color:#FBF9F4; font-size: clamp(28px,4.6vw,52px); font-weight:500; line-height:1.12;">Vivir el Lago es invertir en Tu Calidad de Vida</h2>
+      <p style="color:#EAE3D4; font-family:'Montserrat',sans-serif; font-size: clamp(15px,1.9vw,19px); font-weight:400; line-height:1.6; max-width:520px;">Naturaleza, descanso, seguridad y plusvalía en un entorno privilegiado a solo 2 horas de Santiago.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. UBICACIONES DESTACADAS ========== -->
+<section aria-label="Ubicaciones destacadas" style="padding: clamp(48px,7vw,100px) clamp(20px,5vw,72px);">
+  <div style="max-width:1120px; margin:0 auto;">
+    <div data-reveal style="text-align:center; margin-bottom: clamp(36px,5vw,56px);">
+      <span style="font-family:'Montserrat',sans-serif; font-size:12px; letter-spacing:.34em; color:#C3A24E;">EN EL MAPA</span>
+      <h2 style="margin-top:14px; font-size: clamp(30px,5vw,52px); font-weight:600;">Ubicaciones Destacadas</h2>
+    </div>
+
+    <div data-reveal style="position:relative; border-radius:18px; overflow:hidden; box-shadow:0 26px 60px -34px rgba(0,29,64,.55); aspect-ratio:16/9; min-height:340px; background:#dfe6e4;">
+      <image-slot id="map-rapel" shape="rect" fit="cover" placeholder="Mapa estilizado del Lago Rapel"></image-slot>
+      <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,29,64,.08) 0%, rgba(0,29,64,.30) 100%);"></div>
+
+      <!-- Marcadores -->
+      <div style="position:absolute; top:26%; left:30%; display:flex; flex-direction:column; align-items:center; transform:translate(-50%,-100%);">
+        <span style="background:#FBF9F4; color:#001d40; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; letter-spacing:.08em; padding:6px 12px; border-radius:20px; box-shadow:0 6px 16px -6px rgba(0,29,64,.5); white-space:nowrap;">San Rafael</span>
+        <svg width="26" height="30" viewBox="0 0 24 30" fill="#C3A24E" stroke="#001d40" stroke-width="1.4" aria-hidden="true"><path d="M12 1c5 0 9 4 9 9 0 6.5-9 18-9 18S3 16 3 10c0-5 4-9 9-9z"/><circle cx="12" cy="10" r="3" fill="#FBF9F4"/></svg>
+      </div>
+      <div style="position:absolute; top:52%; left:58%; display:flex; flex-direction:column; align-items:center; transform:translate(-50%,-100%);">
+        <span style="background:#FBF9F4; color:#001d40; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; letter-spacing:.08em; padding:6px 12px; border-radius:20px; box-shadow:0 6px 16px -6px rgba(0,29,64,.5); white-space:nowrap;">Las Palmas</span>
+        <svg width="26" height="30" viewBox="0 0 24 30" fill="#C3A24E" stroke="#001d40" stroke-width="1.4" aria-hidden="true"><path d="M12 1c5 0 9 4 9 9 0 6.5-9 18-9 18S3 16 3 10c0-5 4-9 9-9z"/><circle cx="12" cy="10" r="3" fill="#FBF9F4"/></svg>
+      </div>
+      <div style="position:absolute; top:72%; left:40%; display:flex; flex-direction:column; align-items:center; transform:translate(-50%,-100%);">
+        <span style="background:#FBF9F4; color:#001d40; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; letter-spacing:.08em; padding:6px 12px; border-radius:20px; box-shadow:0 6px 16px -6px rgba(0,29,64,.5); white-space:nowrap;">Pullin</span>
+        <svg width="26" height="30" viewBox="0 0 24 30" fill="#C3A24E" stroke="#001d40" stroke-width="1.4" aria-hidden="true"><path d="M12 1c5 0 9 4 9 9 0 6.5-9 18-9 18S3 16 3 10c0-5 4-9 9-9z"/><circle cx="12" cy="10" r="3" fill="#FBF9F4"/></svg>
+      </div>
+    </div>
+
+    <div data-reveal style="text-align:center; margin-top: clamp(30px,4vw,44px);">
+      <a href="#" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:16px 40px; background:#001d40; color:#FBF9F4; font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:.16em; border-radius:6px; transition:background .3s ease, transform .3s ease;" style-hover="background:#223e3f; transform:translateY(-2px)">VER TODAS LAS UBICACIONES</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7. LAGUNA ACULEO ========== -->
+<section aria-label="Laguna Aculeo" data-reveal style="position:relative; min-height: clamp(520px,62vw,660px); display:flex; align-items:center; overflow:hidden;">
+  <div style="position:absolute; inset:0;">
+    <image-slot id="aculeo-bg" shape="rect" fit="cover" placeholder="Panorámica de Laguna Aculeo"></image-slot>
+  </div>
+  <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,29,64,.35) 0%, rgba(0,29,64,.68) 100%);"></div>
+  <div style="position:relative; z-index:2; max-width:960px; margin:0 auto; width:100%; padding: clamp(48px,7vw,96px) clamp(24px,6vw,72px); text-align:center; display:flex; flex-direction:column; align-items:center; gap:22px;">
+    <span style="display:inline-block; background:#C3A24E; color:#001d40; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:.28em; padding:7px 16px; border-radius:4px;">EXTRA</span>
+    <h2 style="color:#FBF9F4; font-size: clamp(34px,6.5vw,68px); font-weight:600; letter-spacing:.03em; line-height:1.05;">LAGUNA ACULEO</h2>
+    <p style="color:#EAE3D4; font-family:'Montserrat',sans-serif; font-size: clamp(15px,2vw,20px); font-weight:400; max-width:560px;">Proyectos exclusivos en un entorno natural único</p>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: clamp(20px,3vw,40px); width:100%; max-width:820px; margin-top:14px;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+        <span style="color:#C3A24E;" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c0-6 3-11 8-13-1 6-4 9-8 9M12 21c0-5-2.5-9-7-11 1 5 3.5 8 7 8M12 21V10"/></svg></span>
+        <p style="color:#F1EBDD; font-family:'Montserrat',sans-serif; font-size:15px; font-weight:500; line-height:1.4;">Entorno natural privilegiado</p>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+        <span style="color:#C3A24E;" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></span>
+        <p style="color:#F1EBDD; font-family:'Montserrat',sans-serif; font-size:15px; font-weight:500; line-height:1.4;">Gran potencial de inversión</p>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+        <span style="color:#C3A24E;" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+        <p style="color:#F1EBDD; font-family:'Montserrat',sans-serif; font-size:15px; font-weight:500; line-height:1.4;">A solo 1 hora de Santiago</p>
+      </div>
+    </div>
+
+    <a href="#" style="margin-top:16px; display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:16px 40px; background:#C3A24E; color:#001d40; font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:.16em; border-radius:6px; transition:background .3s ease, transform .3s ease;" style-hover="background:#d8be7a; transform:translateY(-2px)">VER PROYECTOS EN LAGUNA ACULEO</a>
+  </div>
+</section>
+
+<!-- ========== 8. ¿POR QUÉ ELEGIR? ========== -->
+<section aria-label="Por qué elegirnos" style="background:#223e3f; padding: clamp(56px,8vw,110px) clamp(20px,5vw,72px);">
+  <div style="max-width:1120px; margin:0 auto;">
+    <div data-reveal style="text-align:center; margin-bottom: clamp(40px,5vw,64px);">
+      <span style="font-family:'Montserrat',sans-serif; font-size:12px; letter-spacing:.34em; color:#C3A24E;">NUESTRO SELLO</span>
+      <h2 style="margin-top:14px; color:#FBF9F4; font-size: clamp(28px,4.8vw,50px); font-weight:500; line-height:1.12; text-wrap:balance;">¿Por qué elegir Lago Rapel Propiedades?</h2>
+    </div>
+
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:0;">
+      <div data-reveal style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px; padding: clamp(20px,2vw,28px) clamp(16px,2.4vw,32px); border-right:1px solid rgba(195,162,78,.28);">
+        <span style="color:#C3A24E;" aria-hidden="true"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2.5 19c0-3 2.5-5 5.5-5M21.5 19c0-3-2.5-5-5.5-5M9 15c1-.6 2-.6 3 0"/></svg></span>
+        <p style="color:#FBF9F4; font-family:'Montserrat',sans-serif; font-size:16px; font-weight:500; line-height:1.4;">Dos actores con experiencia</p>
+      </div>
+      <div data-reveal style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px; padding: clamp(20px,2vw,28px) clamp(16px,2.4vw,32px); border-right:1px solid rgba(195,162,78,.28);">
+        <span style="color:#C3A24E;" aria-hidden="true"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l2.5 2.2 3.3-.4 1 3.2 2.9 1.6-1.3 3 1.3 3-2.9 1.6-1 3.2-3.3-.4L12 22l-2.5-2.2-3.3.4-1-3.2L2.3 15l1.3-3-1.3-3 2.9-1.6 1-3.2 3.3.4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <p style="color:#FBF9F4; font-family:'Montserrat',sans-serif; font-size:16px; font-weight:500; line-height:1.4;">Propiedades seleccionadas</p>
+      </div>
+      <div data-reveal style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px; padding: clamp(20px,2vw,28px) clamp(16px,2.4vw,32px); border-right:1px solid rgba(195,162,78,.28);">
+        <span style="color:#C3A24E;" aria-hidden="true"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <p style="color:#FBF9F4; font-family:'Montserrat',sans-serif; font-size:16px; font-weight:500; line-height:1.4;">Información transparente</p>
+      </div>
+      <div data-reveal style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px; padding: clamp(20px,2vw,28px) clamp(16px,2.4vw,32px);">
+        <span style="color:#C3A24E;" aria-hidden="true"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></span>
+        <p style="color:#FBF9F4; font-family:'Montserrat',sans-serif; font-size:16px; font-weight:500; line-height:1.4;">Asesoría experta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 9. CTA FINAL ========== -->
+<section aria-label="Contacto final" style="position:relative; overflow:hidden; padding: clamp(64px,9vw,130px) clamp(20px,5vw,72px);">
+  <div style="position:absolute; inset:0;">
+    <image-slot id="cta-bg" shape="rect" fit="cover" placeholder="Fotografía nocturna o de atardecer del Lago Rapel"></image-slot>
+  </div>
+  <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(0,29,64,.72) 0%, rgba(0,29,64,.82) 100%);"></div>
+
+  <div style="position:relative; z-index:2; max-width:1000px; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:center; gap: clamp(24px,4vw,40px);">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:12px; color:#FBF9F4;">
+      <svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linejoin="round" aria-hidden="true"><rect x="18" y="18" width="64" height="64" transform="rotate(45 50 50)"/><rect x="30" y="30" width="40" height="40" transform="rotate(45 50 50)"/><path d="M50 38 V62 M38 50 H62" stroke-width="3.4"/></svg>
+      <span style="display:flex; flex-direction:column; align-items:center; line-height:1;">
+        <span style="font-family:'Playfair Display',serif; font-weight:500; font-size: clamp(20px,3vw,30px); letter-spacing:.14em;">LAGO RAPEL</span>
+        <span style="font-family:'Montserrat',sans-serif; font-weight:400; font-size:11px; letter-spacing:.44em; margin-top:6px; color:#EDE6D6;">PROPIEDADES</span>
+      </span>
+    </div>
+
+    <h2 style="color:#FBF9F4; font-size: clamp(28px,5.4vw,58px); font-weight:600; letter-spacing:.02em; line-height:1.08; text-wrap:balance;">Tu Próxima Propiedad<br/>Te Está Esperando</h2>
+    <p style="color:#EAE3D4; font-family:'Montserrat',sans-serif; font-size: clamp(15px,2vw,20px); font-weight:400; max-width:620px;">Explora las oportunidades de cada marca y encuentra el lugar perfecto para ti</p>
+
+    <div style="width:100%; max-width:760px; margin-top:8px; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: clamp(18px,2.6vw,28px);">
+      <article style="background:rgba(251,249,244,.97); border-radius:14px; padding: clamp(26px,3vw,38px); display:flex; flex-direction:column; align-items:center; gap:16px;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+          <span style="font-family:'Playfair Display',serif; font-weight:600; font-size: clamp(20px,2.4vw,27px); color:#001d40;">Laukén</span>
+          <span style="font-family:'Montserrat',sans-serif; font-weight:500; font-size:11px; letter-spacing:.34em; color:#C3A24E;">INMOBILIARIA</span>
+        </div>
+        <a href="#" style="display:inline-flex; align-items:center; justify-content:center; min-height:48px; width:100%; padding:14px 30px; background:#001d40; color:#FBF9F4; font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:.16em; border-radius:5px; transition:background .3s ease;" style-hover="background:#223e3f">VER MÁS</a>
+      </article>
+      <article style="background:rgba(251,249,244,.97); border-radius:14px; padding: clamp(26px,3vw,38px); display:flex; flex-direction:column; align-items:center; gap:16px;">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:5px;">
+          <span style="font-family:'Playfair Display',serif; font-weight:600; font-size: clamp(20px,2.4vw,27px); color:#001d40;">Goycolea</span>
+          <span style="font-family:'Montserrat',sans-serif; font-weight:500; font-size:11px; letter-spacing:.34em; color:#C3A24E;">PROPIEDADES</span>
+        </div>
+        <a href="#" style="display:inline-flex; align-items:center; justify-content:center; min-height:48px; width:100%; padding:14px 30px; background:#001d40; color:#FBF9F4; font-family:'Montserrat',sans-serif; font-weight:600; font-size:13px; letter-spacing:.16em; border-radius:5px; transition:background .3s ease;" style-hover="background:#223e3f">VER MÁS</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#001d40; color:#9aa7b8; text-align:center; padding:28px 20px; font-family:'Montserrat',sans-serif; font-size:13px; letter-spacing:.04em;">
+  © 2026 Lago Rapel Propiedades · Laukén Inmobiliaria · Goycolea Propiedades
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity .9s cubic-bezier(.22,.61,.36,1), transform .9s cubic-bezier(.22,.61,.36,1)';
+      el.style.willChange = 'opacity, transform';
+    });
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(el => io.observe(el));
+    this._io = io;
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
