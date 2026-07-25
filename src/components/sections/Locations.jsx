@@ -13,7 +13,7 @@ export default function Locations() {
           <h2 className="mt-3.5 text-[clamp(30px,5vw,52px)] font-semibold">Ubicaciones Destacadas</h2>
         </Reveal>
 
-        <Reveal className="relative aspect-[16/9] min-h-[340px] overflow-hidden rounded-[18px] bg-[#dfe6e4] shadow-[0_26px_60px_-34px_rgba(0,29,64,.55)]">
+        <Reveal className="relative aspect-[16/10] min-h-[200px] sm:aspect-[16/9] sm:min-h-[340px] overflow-hidden rounded-[18px] bg-[#dfe6e4] shadow-[0_26px_60px_-34px_rgba(0,29,64,.55)]">
           <ImageSlot src="/assets/locations.jpg" position="center 40%" placeholder="Mapa estilizado del Lago Rapel" />
           <div
             className="pointer-events-none absolute inset-0"

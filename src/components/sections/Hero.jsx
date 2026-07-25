@@ -5,12 +5,11 @@ export default function Hero() {
   return (
     <header className="relative flex min-h-[clamp(520px,78vh,720px)] flex-col overflow-hidden px-[clamp(20px,5vw,72px)] pb-[clamp(96px,11vw,150px)] pt-[clamp(24px,4vw,44px)]">
       {/* Video de fondo */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-navy">
         <video
           className="h-full w-full object-cover"
           style={{ objectPosition: 'center 50%' }}
           src="https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/valles-de-range-2/video-banner-valles-de-rangue-2-video%20.mp4"
-          poster="/assets/parcela1.jpg"
           autoPlay
           muted
           loop

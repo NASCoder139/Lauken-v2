@@ -21,7 +21,7 @@ export default function App() {
         />
       </Helmet>
 
-      <div className="w-full max-w-[100vw]">
+      <div className="w-full overflow-x-hidden">
         <Hero />
         <BrandCards />
         <Categories />
