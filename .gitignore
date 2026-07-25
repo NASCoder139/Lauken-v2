@@ -1,12 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Vite / logs
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 # OS / editor
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
 *.tmp
+.vscode/*
+!.vscode/extensions.json
 
 # Claude Design metadata
 .thumbnail
-
-# Node (por si más adelante se agrega tooling)
-node_modules/
