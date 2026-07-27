@@ -37,18 +37,18 @@ export default function FinalCTA() {
           Explora las oportunidades de cada marca y encuentra el lugar perfecto para ti
         </p>
 
-        <div className="mt-2 grid w-full max-w-[760px] grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[clamp(18px,2.6vw,28px)]">
+        <div className="mt-2 grid w-full max-w-[760px] grid-cols-2 gap-[clamp(12px,2.6vw,28px)]">
           {brands.map((b) => (
             <article
               key={b.name}
-              className="flex flex-col items-center gap-4 rounded-[14px] bg-[rgba(251,249,244,.97)] p-[clamp(26px,3vw,38px)]"
+              className="flex flex-col items-center gap-2.5 sm:gap-4 rounded-[14px] bg-[rgba(251,249,244,.97)] p-[clamp(16px,3vw,38px)]"
             >
               <LogoMark size={44} className={b.color === 'ink' ? 'text-ink' : 'text-navy'} />
               <div className="flex flex-col items-center gap-[5px]">
-                <span className="font-display text-[clamp(20px,2.4vw,27px)] font-semibold text-navy">
+                <span className="font-display text-[clamp(18px,2.4vw,27px)] font-semibold text-navy">
                   {b.name}
                 </span>
-                <span className="font-sans text-[11px] font-medium tracking-[0.34em] text-gold">
+                <span className="font-sans text-[10px] tracking-[0.16em] sm:text-[11px] sm:tracking-[0.34em] font-medium text-gold">
                   {b.tag}
                 </span>
               </div>
@@ -57,7 +57,7 @@ export default function FinalCTA() {
                 variant={b.color}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-[30px] py-3.5"
+                className="w-full px-3 py-3 sm:px-[30px] sm:py-3.5"
               >
                 VER MÁS
               </Button>
