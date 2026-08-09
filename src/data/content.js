@@ -1,6 +1,6 @@
 export const brands = [
-  { name: 'Laukén', tag: 'INMOBILIARIA', subtitle: 'Proyectos junto al lago', color: 'navy', url: 'https://lauken.cl/' },
-  { name: 'Goycolea', tag: 'PROPIEDADES', subtitle: 'Propiedades junto al lago', color: 'ink', url: 'https://goycooleapropiedades.cl/' },
+  { name: 'Laukén', tag: 'INMOBILIARIA', subtitle: 'Proyectos junto al lago', color: 'navy', url: 'https://lauken.cl/', logo: '/assets/logo-lauken.png' },
+  { name: 'Goycolea', tag: 'PROPIEDADES', subtitle: 'Propiedades junto al lago', color: 'ink', url: 'https://goycooleapropiedades.cl/', logo: '/assets/logo-goycolea.png' },
 ];
 
 export const categories = [
@@ -19,7 +19,8 @@ export const properties = [
     subtitle: 'Sitios de 1.500 m²',
     price: 'Desde $60.000.000',
     placeholder: 'Foto Bahía Las Palmas - Lago Rapel',
-    img: '/assets/prop-san-rafael.jpg',
+    img: '/assets/las-palmas-aerea.jpg',
+    imgPos: 'center 50%',
     url: 'https://lauken.cl/bahia-las-palmas',
     features: ['Marina exclusiva', 'Rol propio', 'Acceso controlado'],
   },

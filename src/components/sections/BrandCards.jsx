@@ -17,7 +17,11 @@ export default function BrandCards() {
             delay={i * 0.08}
             className="flex flex-col items-center gap-2.5 sm:gap-3.5 rounded-[14px] border border-[#ECE3D0] bg-cream p-[clamp(16px,2.6vw,32px)_clamp(12px,3vw,40px)] text-center shadow-[0_24px_60px_-28px_rgba(0,29,64,.45)]"
           >
-            <LogoMark size={40} className={b.color === 'ink' ? 'text-ink' : 'text-navy'} />
+            {b.logo ? (
+              <img src={b.logo} alt={`Logo ${b.name}`} className="h-[clamp(38px,4.4vw,52px)] w-auto object-contain" />
+            ) : (
+              <LogoMark size={40} className={b.color === 'ink' ? 'text-ink' : 'text-navy'} />
+            )}
             <div className="flex flex-col items-center gap-1.5">
               <span className="font-display text-[clamp(22px,2.6vw,30px)] font-semibold tracking-[0.02em] text-navy">
                 {b.name}

@@ -9,7 +9,7 @@ export default function Hero() {
         <video
           className="h-full w-full object-cover"
           style={{ objectPosition: 'center 50%' }}
-          src="https://storage.googleapis.com/lauken/lauken-web/proyectos/videos/valles-de-range-2/video-banner-valles-de-rangue-2-video%20.mp4"
+          src="https://storage.googleapis.com/lauken_web/lauken-web/proyectos/videos/las-palmas/banner-laspalmas.mp4"
           autoPlay
           muted
           loop

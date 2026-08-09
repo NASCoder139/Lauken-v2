@@ -43,7 +43,11 @@ export default function FinalCTA() {
               key={b.name}
               className="flex flex-col items-center gap-2.5 sm:gap-4 rounded-[14px] bg-[rgba(251,249,244,.97)] p-[clamp(16px,3vw,38px)]"
             >
-              <LogoMark size={44} className={b.color === 'ink' ? 'text-ink' : 'text-navy'} />
+              {b.logo ? (
+                <img src={b.logo} alt={`Logo ${b.name}`} className="h-[clamp(40px,4.6vw,54px)] w-auto object-contain" />
+              ) : (
+                <LogoMark size={44} className={b.color === 'ink' ? 'text-ink' : 'text-navy'} />
+              )}
               <div className="flex flex-col items-center gap-[5px]">
                 <span className="font-display text-[clamp(18px,2.4vw,27px)] font-semibold text-navy">
                   {b.name}
