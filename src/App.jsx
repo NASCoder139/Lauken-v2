@@ -17,7 +17,7 @@ export default function App() {
         <title>Lago Rapel Propiedades</title>
         <meta
           name="description"
-          content="Lago Rapel Propiedades — parcelas, sitios y casas junto al lago. Laukén Inmobiliaria y Goycolea Propiedades."
+          content="Lago Rapel Propiedades — parcelas, sitios y casas junto al lago. Laukén Inmobiliaria y Goycoolea Propiedades."
         />
       </Helmet>
 

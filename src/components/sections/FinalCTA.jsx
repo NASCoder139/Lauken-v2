@@ -1,7 +1,5 @@
 import ImageSlot from '../ui/ImageSlot';
 import Button from '../ui/Button';
-import LogoMark from '../ui/LogoMark';
-import { Diamond } from '../ui/icons';
 import { brands } from '../../data/content';
 
 export default function FinalCTA() {
@@ -17,7 +15,11 @@ export default function FinalCTA() {
 
       <div className="relative z-[2] mx-auto flex max-w-[1000px] flex-col items-center gap-[clamp(24px,4vw,40px)] text-center">
         <div className="flex flex-col items-center gap-3 text-cream">
-          <Diamond />
+          <img
+            src="/assets/logo-lago-rapel-cream.png"
+            alt="Lago Rapel Propiedades"
+            className="h-[clamp(46px,5.4vw,66px)] w-auto drop-shadow-[0_2px_16px_rgba(0,29,64,0.45)]"
+          />
           <span className="flex flex-col items-center leading-none">
             <span className="font-sans text-[clamp(28px,4vw,44px)] font-light tracking-[0.14em]">
               LAGO RAPEL
@@ -43,25 +45,16 @@ export default function FinalCTA() {
               key={b.name}
               className="flex flex-col items-center gap-2.5 sm:gap-4 rounded-[14px] bg-[rgba(251,249,244,.97)] p-[clamp(16px,3vw,38px)]"
             >
-              {b.logo ? (
-                <img src={b.logo} alt={`Logo ${b.name}`} className="h-[clamp(40px,4.6vw,54px)] w-auto object-contain" />
-              ) : (
-                <LogoMark size={44} className={b.color === 'ink' ? 'text-ink' : 'text-navy'} />
-              )}
-              <div className="flex flex-col items-center gap-[5px]">
-                <span className="font-display text-[clamp(18px,2.4vw,27px)] font-semibold text-navy">
-                  {b.name}
-                </span>
-                <span className="font-sans text-[10px] tracking-[0.16em] sm:text-[11px] sm:tracking-[0.34em] font-medium text-gold">
-                  {b.tag}
-                </span>
+              {/* Lockup de marca: mismo criterio de ancho que en BrandCards */}
+              <div className="flex min-h-[clamp(52px,7vw,92px)] w-full items-center justify-center">
+                <img src={b.logo} alt={`${b.name} ${b.tag}`} className="h-auto" style={{ width: b.logoWidth }} />
               </div>
               <Button
                 href={b.url}
                 variant={b.color}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-3 py-3 sm:px-[30px] sm:py-3.5"
+                className="mt-auto w-full px-3 py-3 sm:px-[30px] sm:py-3.5"
               >
                 VER MÁS
               </Button>

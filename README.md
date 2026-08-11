@@ -1,7 +1,7 @@
 # Lago Rapel Propiedades — Landing (React)
 
 Landing page de **Lago Rapel Propiedades** (marcas **Laukén Inmobiliaria** y
-**Goycolea Propiedades**), reconstruida como aplicación **React** a partir del
+**Goycoolea Propiedades**), reconstruida como aplicación **React** a partir del
 diseño original de Claude Design.
 
 Stack alineado con el proyecto `lauken`: **Vite + React 18 + Tailwind CSS 3 +

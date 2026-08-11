@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import LogoMark from '../ui/LogoMark';
 
 export default function Hero() {
   return (
@@ -37,7 +36,11 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
         >
           <div className="flex items-center gap-4 text-cream">
-            <LogoMark size={78} className="drop-shadow-[0_2px_16px_rgba(0,29,64,0.5)]" />
+            <img
+              src="/assets/logo-lago-rapel-cream.png"
+              alt="Lago Rapel Propiedades"
+              className="h-[clamp(58px,7vw,84px)] w-auto drop-shadow-[0_2px_16px_rgba(0,29,64,0.5)]"
+            />
             <span className="flex flex-col items-center leading-none">
               <span className="font-sans text-[clamp(32px,4.6vw,54px)] font-light tracking-[0.14em]">
                 LAGO RAPEL

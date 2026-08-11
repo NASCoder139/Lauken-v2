@@ -1,6 +1,10 @@
+// logoWidth: ancho del lockup dentro de la tarjeta, en % del contenedor.
+// Los dos archivos tienen proporciones muy distintas (Lauken 2,95:1 vs Goycoolea 1,57:1),
+// asi que a igual alto uno se ve mucho mas grande. Estos anchos igualan el area de
+// tinta renderizada de ambos (relacion 1,48:1), que es lo que se percibe como "mismo tamano".
 export const brands = [
-  { name: 'Laukén', tag: 'INMOBILIARIA', subtitle: 'Proyectos junto al lago', color: 'navy', url: 'https://lauken.cl/', logo: '/assets/logo-lauken.png' },
-  { name: 'Goycolea', tag: 'PROPIEDADES', subtitle: 'Propiedades junto al lago', color: 'ink', url: 'https://goycooleapropiedades.cl/', logo: '/assets/logo-goycolea.png' },
+  { name: 'Laukén', tag: 'INMOBILIARIA', subtitle: 'Proyectos junto al lago', color: 'navy', url: 'https://lauken.cl/', logo: '/assets/logo-lauken-lockup.png', logoWidth: '80%' },
+  { name: 'Goycoolea', tag: 'PROPIEDADES', subtitle: 'Propiedades junto al lago', color: 'ink', url: 'https://goycooleapropiedades.cl/', logo: '/assets/logo-goycoolea-lockup.png', logoWidth: '54%' },
 ];
 
 export const categories = [
@@ -26,7 +30,7 @@ export const properties = [
   },
   {
     id: 'casa-orilla',
-    badge: 'GOYCOLEA PROPIEDADES',
+    badge: 'GOYCOOLEA PROPIEDADES',
     badgeColor: 'rgba(34,62,63,.94)',
     title: 'Casa a orilla de Lago Rapel',
     subtitle: 'Propiedad seleccionada',
