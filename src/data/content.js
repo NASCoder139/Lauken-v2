@@ -67,12 +67,42 @@ export const properties = [
     url: 'https://www.goycooleapropiedades.cl//fichaPropiedad.aspx?i=160279',
     features: ['Vista panorámica', 'Acceso controlado'],
   },
+  {
+    id: 'la-brisa',
+    badge: 'LAUKÉN INMOBILIARIA',
+    badgeColor: 'rgba(0,29,64,.92)',
+    title: 'La Brisa · Lago Rapel',
+    subtitle: 'Parcelas de 5.000 m²',
+    price: 'Desde $60.000.000',
+    placeholder: 'Foto La Brisa - Lago Rapel',
+    img: '/assets/la-brisa.jpg',
+    imgPos: 'center 50%',
+    url: 'https://lauken.cl/la-brisa',
+    features: ['Acceso a lago', 'Rol propio', 'Acceso controlado'],
+  },
+  {
+    id: 'bahia-los-quillayes',
+    badge: 'GOYCOOLEA PROPIEDADES',
+    badgeColor: 'rgba(34,62,63,.94)',
+    title: 'Bahía Los Quillayes · Lago Rapel',
+    subtitle: 'Parcelas de 5.000 m²',
+    price: 'Desde UF 5.000',
+    placeholder: 'Foto Bahía Los Quillayes - Lago Rapel',
+    img: '/assets/bahia-los-quillayes.jpg',
+    imgPos: 'center 50%',
+    url: 'https://www.goycooleapropiedades.cl//fichaPropiedad.aspx?i=160591',
+    features: ['Orilla a lago', 'Rol propio', 'Bahía tranquila'],
+  },
 ];
 
+// Coordenadas tomadas de los links de Google Maps de cada proyecto.
+// labelAlign: altura del nombre respecto al pin (centro por defecto). La Brisa y
+// Costa San Rafael estan a menos de 1 km y en movil sus nombres se montan.
 export const locations = [
-  { name: 'San Rafael', top: '26%', left: '30%' },
-  { name: 'Las Palmas', top: '52%', left: '58%' },
-  { name: 'Pullin', top: '72%', left: '40%' },
+  { name: 'Costa Pulín', lat: -34.1056057, lng: -71.5468979, url: 'https://lauken.cl/costa-pulin' },
+  { name: 'La Brisa', lat: -34.1802979, lng: -71.498505, url: 'https://lauken.cl/la-brisa', labelAlign: 'top' },
+  { name: 'Costa San Rafael', lat: -34.1886935, lng: -71.487156, url: 'https://lauken.cl/san-rafael', labelAlign: 'bottom' },
+  { name: 'Bahía Las Palmas', lat: -34.2071981, lng: -71.4482274, url: 'https://lauken.cl/bahia-las-palmas' },
 ];
 
 export const aculeoHighlights = [

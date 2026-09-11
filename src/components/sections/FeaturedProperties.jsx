@@ -22,8 +22,8 @@ export default function FeaturedProperties() {
   const [aLaVista, setALaVista] = useState(true);
   const [pestanaActiva, setPestanaActiva] = useState(true);
 
-  // Cuantas "pantallas" ocupa el carrusel con el ancho actual: 2 en desktop
-  // (dos tarjetas por vista) y 4 en movil (una por vista).
+  // Cuantas "pantallas" ocupa el carrusel con el ancho actual: dos tarjetas
+  // por vista en desktop y una por vista en movil.
   const medir = useCallback(() => {
     const el = scrollerRef.current;
     if (!el || el.clientWidth === 0) return;

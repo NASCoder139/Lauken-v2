@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from './components/sections/Hero';
 import BrandCards from './components/sections/BrandCards';
-import Categories from './components/sections/Categories';
+// Seccion "¿Que estas buscando?" oculta por ahora; se volvera a usar.
+// import Categories from './components/sections/Categories';
 import FeaturedProperties from './components/sections/FeaturedProperties';
 import QualityBanner from './components/sections/QualityBanner';
 import Locations from './components/sections/Locations';
@@ -24,7 +25,7 @@ export default function App() {
       <div className="w-full overflow-x-hidden">
         <Hero />
         <BrandCards />
-        <Categories />
+        {/* <Categories /> */}
         <FeaturedProperties />
         <QualityBanner />
         <Locations />

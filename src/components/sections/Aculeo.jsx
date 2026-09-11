@@ -40,7 +40,13 @@ export default function Aculeo() {
           ))}
         </div>
 
-        <Button variant="gold" className="mt-4 px-[40px] py-4 min-h-[52px]">
+        <Button
+          variant="gold"
+          href="https://lauken.cl/valles-de-rangue-2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 px-[40px] py-4 min-h-[52px]"
+        >
           VER PROYECTOS EN LAGUNA ACULEO
         </Button>
       </div>

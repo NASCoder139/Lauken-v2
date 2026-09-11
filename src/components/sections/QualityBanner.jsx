@@ -9,15 +9,8 @@ export default function QualityBanner() {
       className="relative flex min-h-[clamp(320px,40vw,440px)] items-center overflow-hidden"
     >
       <div className="absolute inset-0">
-        <ImageSlot src="/assets/quality.jpg" position="center 28%" placeholder="Familia observando el lago desde un muelle" />
+        <ImageSlot src="/assets/la-brisa-banner.png" position="center 100%" placeholder="La Brisa - Lago Rapel" />
       </div>
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(90deg, rgba(0,29,64,.82) 0%, rgba(0,29,64,.55) 46%, rgba(0,29,64,.18) 100%)',
-        }}
-      />
       <div className="relative z-[2] mx-auto w-full max-w-[1200px] px-[clamp(24px,6vw,90px)] py-[clamp(28px,4vw,56px)]">
         <div className="flex max-w-[620px] flex-col gap-[22px]">
           <div className="h-0.5 w-14 bg-gold" />
